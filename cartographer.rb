@@ -5,23 +5,23 @@
 class Cartographer < Formula
   desc "CLI tool for visualizing Kubernetes resource dependencies as DOT graphs"
   homepage "https://github.com/HMetcalfeW/cartographer"
-  version "0.2.0"
+  version "0.3.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/HMetcalfeW/cartographer/releases/download/v0.2.0/cartographer_0.2.0_darwin_amd64.tar.gz"
-      sha256 "fd7669030dfc4d6f72121548f2d0e8a1b3ced82aada086963008bc62c4cfa591"
+      url "https://github.com/HMetcalfeW/cartographer/releases/download/v0.3.0/cartographer_0.3.0_darwin_amd64.tar.gz"
+      sha256 "475050b2dff44a0cc563fcf449fbd5f3b840e2e13203b39dc5aa7461e5aa8dac"
 
-      def install
+      define_method(:install) do
         bin.install "cartographer"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/HMetcalfeW/cartographer/releases/download/v0.2.0/cartographer_0.2.0_darwin_arm64.tar.gz"
-      sha256 "d3f0c5eb1f8d0389cda1062d5d5de826b83b6a92a4249309c0e80caf08a1d174"
+      url "https://github.com/HMetcalfeW/cartographer/releases/download/v0.3.0/cartographer_0.3.0_darwin_arm64.tar.gz"
+      sha256 "21e73cd069a5b75d12daf5cb77a3c38081e7f3699fa32173f50e69ac77cf9edf"
 
-      def install
+      define_method(:install) do
         bin.install "cartographer"
       end
     end
@@ -29,16 +29,16 @@ class Cartographer < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/HMetcalfeW/cartographer/releases/download/v0.2.0/cartographer_0.2.0_linux_amd64.tar.gz"
-      sha256 "adc04f00c912b25ba6016103da7724aa1a7ff9a609ee1e356376c26bb47592be"
-      def install
+      url "https://github.com/HMetcalfeW/cartographer/releases/download/v0.3.0/cartographer_0.3.0_linux_amd64.tar.gz"
+      sha256 "4d696d2301826a316c9d355de7f5494bbd131f3cdea6fc247c992efbcb687950"
+      define_method(:install) do
         bin.install "cartographer"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/HMetcalfeW/cartographer/releases/download/v0.2.0/cartographer_0.2.0_linux_arm64.tar.gz"
-      sha256 "1d2aae512183652a83eaf20d3db3a099b420aad3cfb77dbac1e561e151f2177b"
-      def install
+      url "https://github.com/HMetcalfeW/cartographer/releases/download/v0.3.0/cartographer_0.3.0_linux_arm64.tar.gz"
+      sha256 "698d178c764bacd3e94069d3ea6d4cdf575186cbda93a6f99e7b6eacabe78a28"
+      define_method(:install) do
         bin.install "cartographer"
       end
     end
